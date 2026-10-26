@@ -178,6 +178,8 @@
     "vaul": "^1.1.2",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
     "zod": "^3.25.76"
+    "contentlayer": "^0.3.4",
+    "next-contentlayer": "^0.3.4"
   },
   "devDependencies": {
     "@react-email/ui": "^6.3.2",
