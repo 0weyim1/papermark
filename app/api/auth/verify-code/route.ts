@@ -31,6 +31,14 @@ export async function POST(request: NextRequest) {
     const normalizedEmail = email.trim().toLowerCase();
     const normalizedCode = code.trim().toUpperCase();
 
+    // Restrict access strictly to the institutional email domain
+    if (!normalizedEmail.endsWith("@aastu.edu.et")) {
+      return NextResponse.json(
+        { error: "Access denied. You must use an official @aastu.edu.et institutional email address." },
+        { status: 403 },
+      );
+    }
+
     // Validate non-empty email and exact code length
     if (!normalizedEmail || normalizedCode.length !== 10) {
       return NextResponse.json(
