@@ -18,7 +18,9 @@
     "stripe:webhook": "pkgx stripe listen --forward-to localhost:3000/api/stripe/webhook",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mdx}\"",
     "dev:prisma": "npx prisma generate && npx prisma migrate deploy",
-    "generate:openapi": "tsx scripts/generate-openapi.ts"
+    "generate:openapi": "tsx scripts/generate-openapi.ts",
+    "build": "next build",
+    "vercel-build": "contentlayer build && next build"
   },
   "dependencies": {
     "@ai-sdk/google-vertex": "^4.0.137",
@@ -179,7 +181,8 @@
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
     "zod": "^3.25.76"
     "contentlayer": "^0.3.4",
-    "next-contentlayer": "^0.3.4"
+    "next-contentlayer": "^0.3.4",
+    ...
   },
   "devDependencies": {
     "@react-email/ui": "^6.3.2",
